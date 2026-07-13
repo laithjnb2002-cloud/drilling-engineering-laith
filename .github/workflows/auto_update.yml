@@ -1,0 +1,33 @@
+name: Daily Oil Price & News Update
+
+on:
+  schedule:
+    - cron: '0 5 * * *' # يعمل تلقائياً كل يوم الساعة 5 صباحاً بتوقيت جرينتش (8 صباحاً بتوقيت العراق)
+  workflow_dispatch: # يتيح لك تشغيله يدوياً في أي وقت تريد لعرض التحديث فوراً
+
+jobs:
+  update-site:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Install Dependencies
+      run: |
+        pip install requests
+
+    - name: Run Update Script
+      run: python update_site.py
+
+    - name: Commit and Push Changes
+      run: |
+        git config --global user.name "GitHub Action"
+        git config --global user.email "action@github.com"
+        git add index.html
+        git commit -m "Auto-updated Oil Prices & News [Skip CI]" || exit 0
+        git push
