@@ -2,548 +2,218 @@
 <html lang="en">
 
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>
-Drilling Engineering by Eng. Laith Ali
-</title>
-
-
-<style>
-
-/* General */
-
-body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f4f7fa;
-    color:#333;
-}
-
-
-/* Header */
-
-header{
-
-    background:
-    linear-gradient(
-    rgba(0,0,0,0.65),
-    rgba(0,0,0,0.65)
-    ),
-    url("https://images.unsplash.com/photo-1516939884455-1445c8652f83");
-
-    background-size:cover;
-    background-position:center;
-
-    color:white;
-    text-align:center;
-
-    padding:100px 20px;
-
-}
-
-
-header h1{
-
-    font-size:45px;
-    margin-bottom:15px;
-
-}
-
-
-header p{
-
-    font-size:22px;
-
-}
-
-
-/* Navigation */
-
-nav{
-
-    background:#071a33;
-    padding:18px;
-    text-align:center;
-
-}
-
-
-nav a{
-
-    color:white;
-    text-decoration:none;
-
-    margin:15px;
-
-    font-weight:bold;
-
-}
-
-
-nav a:hover{
-
-    color:#d4af37;
-
-}
-
-
-/* Language button */
-
-.language{
-
-    position:absolute;
-    right:20px;
-    top:20px;
-
-}
-
-
-.language button{
-
-    background:#d4af37;
-    border:none;
-
-    padding:8px 15px;
-
-    border-radius:5px;
-
-    cursor:pointer;
-
-}
-
-
-
-/* Sections */
-
-section{
-
-    max-width:1100px;
-
-    margin:35px auto;
-
-    background:white;
-
-    padding:35px;
-
-    border-radius:15px;
-
-    box-shadow:
-    0 5px 20px rgba(0,0,0,0.1);
-
-}
-
-
-h2{
-
-    color:#071a33;
-
-    border-left:
-    5px solid #d4af37;
-
-    padding-left:15px;
-
-}
-
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drilling Engineering by Eng. Laith Ali</title>
+    <style>
+        /* General */
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url("https://images.unsplash.com/photo-1516939884455-1445c8652f83");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 22px;
+        }
+
+        /* Navigation */
+        nav {
+            background: #071a33;
+            padding: 18px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        /* Language button */
+        .language {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+
+        .language button {
+            background: #d4af37;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Sections */
+        section {
+            max-width: 1100px;
+            margin: 35px auto;
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #071a33;
+            border-left: 5px solid #d4af37;
+            padding-left: 15px;
+        }
+
+        .card {
+            background: #fafbfc;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 3px solid #071a33;
+        }
+        
+        .price-val {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d4af37;
+            margin: 5px 0;
+        }
+        
+        .article-body {
+            text-align: justify;
+            color: #444;
+        }
+    </style>
 </head>
-
-
 
 <body>
 
-
 <header>
-
-
-<div class="language">
-
-<button>
-العربية
-</button>
-
-</div>
-
-
-
-<h1>
-Drilling Engineering by Eng. Laith Ali
-</h1>
-
-
-<p>
-Oil & Gas Knowledge Platform
-</p>
-
-
-<p>
-Petroleum & Drilling Engineering | Technical Articles | Energy News
-</p>
-
-
+    <div class="language">
+        <button>العربية</button>
+    </div>
+    <h1>Drilling Engineering by Eng. Laith Ali</h1>
+    <p>Oil & Gas Knowledge Platform</p>
+    <p>Petroleum & Drilling Engineering | Technical Articles | Energy News</p>
 </header>
 
-
-
 <nav>
-
-
-<a href="#news">
-Oil & Gas News
-</a>
-
-
-<a href="#prices">
-Oil Prices
-</a>
-
-
-<a href="#drilling">
-Drilling Engineering
-</a>
-
-
-<a href="#projects">
-Projects
-</a>
-
-
-<a href="#contact">
-Contact
-</a>
-
-
+    <a href="#news">Oil & Gas News</a>
+    <a href="#prices">Oil Prices</a>
+    <a href="#drilling">Drilling Engineering</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
 </nav>
-<!-- Oil & Gas News -->
 
 <section id="news">
-
-<h2>
-Latest Oil & Gas News
-</h2>
-
-
-<div class="card">
-
-<h3>
-Global Energy Market Updates
-</h3>
-
-<p>
-Stay updated with the latest developments in the oil and gas industry,
-including exploration, drilling projects, and energy technologies.
-</p>
-
-<p>
-Source: International Energy Reports
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>
-Oil & Gas Industry Technology
-</h3>
-
-<p>
-News and insights about drilling technologies,
-digital oil fields, and innovation in petroleum engineering.
-</p>
-
-<p>
-Source: Industry Publications
-</p>
-
-</div>
-
-
+    <h2>Latest Oil & Gas News</h2>
+    <div id="news-container">
+        <div class="card">
+            <h3>Global Energy Market Updates</h3>
+            <p>Loading latest oil market news updates...</p>
+        </div>
+    </div>
 </section>
-
-
-
-<!-- Oil Prices -->
 
 <section id="prices">
-
-<h2>
-Oil Market Dashboard
-</h2>
-
-
-<div class="card">
-
-<h3>
-Brent Crude Oil
-</h3>
-
-<p>
-Live price will be connected with market data API.
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>
-WTI Crude Oil
-</h3>
-
-<p>
-Live price will be connected with market data API.
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>
-Natural Gas
-</h3>
-
-<p>
-Energy market information and analysis.
-</p>
-
-</div>
-
-
+    <h2>Oil Market Dashboard</h2>
+    <div class="card">
+        <h3>Brent Crude Oil</h3>
+        <p class="price-val" id="brent-price">Connecting to API...</p>
+    </div>
+    <div class="card">
+        <h3>WTI Crude Oil</h3>
+        <p class="price-val" id="wti-price">Connecting to API...</p>
+    </div>
+    <div class="card">
+        <h3>Natural Gas</h3>
+        <p class="price-val" id="gas-price">Connecting to API...</p>
+    </div>
 </section>
-
-
-
-
-<!-- Drilling Engineering -->
 
 <section id="drilling">
+    <h2>Drilling Engineering Knowledge</h2>
 
+    <div class="card">
+        <h3>Lost Circulation: Causes and Mitigation Strategies</h3>
+        <div class="article-body">
+            <p><strong>Introduction:</strong> Lost circulation remains one of the most challenging and costly drilling problems in petroleum engineering. It is defined as the total or partial loss of drilling fluids into highly permeable, fractured, or cavernous formations.</p>
+            <p><strong>Primary Causes:</strong><br>
+            1. <em>Natural Fractures & Cavernous Formations:</em> Common in limestone and carbonate reservoirs.<br>
+            2. <em>Induced Fractures:</em> Caused by exceeding the formation fracture gradient due to high Equivalent Circulating Density (ECD) or surge pressures.<br>
+            3. <em>High Permeability Formations:</em> Unconsolidated sands and gravels with high porosity.</p>
+            <p><strong>Detection Methods:</strong> Real-time monitoring of mud pit volumes (sudden drop in active pits), decrease in return flow rate compared to pump rate, and Annular Pressure While Drilling (APWD) sensors indicating pressure drops.</p>
+            <p><strong>Mitigation & Solutions:</strong> Sized calcium carbonate, cellulosic fibers, or graphite to bridge the fractures (LCM). Managed Pressure Drilling (MPD) for precise control of the annular pressure profile, or Cement Plugs as a last resort for severe losses.</p>
+        </div>
+    </div>
 
-<h2>
-Drilling Engineering Knowledge
-</h2>
+    <div class="card">
+        <h3>Pipe Sticking Problems</h3>
+        <p>Analysis of mechanisms, prevention, and treatment methods of pipe sticking. (Full technical article coming soon).</p>
+    </div>
 
-
-
-<div class="card">
-
-<h3>
-Lost Circulation
-</h3>
-
-<p>
-Study of causes, detection methods,
-and solutions for lost circulation problems during drilling operations.
-</p>
-
-</div>
-
-
-
-
-<div class="card">
-
-<h3>
-Pipe Sticking Problems
-</h3>
-
-<p>
-Analysis of mechanisms, prevention,
-and treatment methods of pipe sticking.
-</p>
-
-</div>
-
-
-
-
-
-<div class="card">
-
-<h3>
-Wellbore Stability
-</h3>
-
-<p>
-Understanding formation instability
-and drilling challenges.
-</p>
-
-</div>
-
-
+    <div class="card">
+        <h3>Wellbore Stability</h3>
+        <p>Understanding formation instability and drilling challenges. (Full technical article coming soon).</p>
+    </div>
 </section>
-
-
-
-
-<!-- Projects -->
 
 <section id="projects">
-
-
-<h2>
-Research & Projects
-</h2>
-
-
-<div class="card">
-
-<h3>
-Master Research Topics
-</h3>
-
-<ul>
-
-<li>
-Lost Circulation Review
-</li>
-
-<li>
-Pipe Sticking Analysis
-</li>
-
-<li>
-Drilling Problems Investigation
-</li>
-
-</ul>
-
-
-</div>
-
-
+    <h2>Research & Projects</h2>
+    <div class="card">
+        <h3>Master Research Topics</h3>
+        <ul>
+            <li>Lost Circulation Review</li>
+            <li>Pipe Sticking Analysis</li>
+            <li>Drilling Problems Investigation</li>
+        </ul>
+    </div>
 </section>
-
-
-
-
-
-<!-- About -->
 
 <section id="about">
-
-
-<h2>
-About Eng. Laith Ali
-</h2>
-
-
-<p>
-
-Eng. Laith Ali is a Petroleum and Drilling Engineer
-interested in oil and gas technologies,
-drilling optimization, and petroleum engineering research.
-
-</p>
-
-
-<p>
-
-Founder of:
-<br>
-
-<b>
-Drilling Engineering by Eng. Laith Ali
-</b>
-
-</p>
-
-
+    <h2>About Eng. Laith Ali</h2>
+    <p>Eng. Laith Ali is a Petroleum and Drilling Engineer interested in oil and gas technologies, drilling optimization, and petroleum engineering research.</p>
+    <p>Founder of:<br><b>Drilling Engineering by Eng. Laith Ali</b></p>
 </section>
-
-
-
-
-
-<!-- Engineering Library -->
 
 <section id="library">
-
-
-<h2>
-Engineering Library
-</h2>
-
-
-<div class="card">
-
-<p>
-Technical papers, drilling references,
-engineering notes, and educational resources
-will be added soon.
-</p>
-
-
-</div>
-
-
+    <h2>Engineering Library</h2>
+    <div class="card">
+        <p>Technical papers, drilling references, engineering notes, and educational resources will be added soon.</p>
+    </div>
 </section>
-
-
-
-
-
-
-<!-- Contact -->
 
 <section id="contact">
-
-
-<h2>
-Contact
-</h2>
-
-
-<p>
-Email:
-laithali.official@gmail.com
-</p>
-
-
-<p>
-Petroleum Engineering | Drilling Engineering
-</p>
-
-
+    <h2>Contact</h2>
+    <p>Email: laithali.official@gmail.com</p>
+    <p>Petroleum Engineering | Drilling Engineering</p>
 </section>
 
-
-
-
-
-<footer style="
-background:#071a33;
-color:white;
-text-align:center;
-padding:25px;
-margin-top:30px;
-">
-
-
-<p>
-© 2026 Drilling Engineering by Eng. Laith Ali
-</p>
-
-
-<p>
-Oil & Gas Knowledge Platform
-</p>
-
-
+<footer style="background:#071a33; color:white; text-align:center; padding:25px; margin-top:30px;">
+    <p>© 2026 Drilling Engineering by Eng. Laith Ali</p>
+    <p>Oil & Gas Knowledge Platform</p>
 </footer>
 
-
-
 </body>
-
 </html>
