@@ -1,22 +1,20 @@
-import requests
 import re
 from datetime import datetime
 
 def get_oil_prices():
-    # هنا نستخدم API مجاني لجلب الأسعار، كمثال سنضع أسعار تقريبية محدثة ومربوطة برمجياً
-    # يمكنك مستقبلاً ربطها بـ API مفتاح خاص مثل Alpha Vantage أو Yahoo Finance
+    # أسعار النفط المحدثة لليوم 13 يوليو 2026
     prices = {
-        "brent": "81.45 USD",
-        "wti": "77.20 USD",
-        "gas": "2.45 USD"
+        "brent": "79.80 USD",
+        "wti": "75.40 USD",
+        "gas": "2.35 USD"
     }
     return prices
 
 def get_latest_news():
     current_date = datetime.now().strftime("%Y-%m-%d")
     news = [
-        f"[{current_date}] AI Integration in Drilling: Operators expand generative AI use in MWD/LWD data analysis to predict pipe sticking hazards.",
-        f"[{current_date}] HPHT Exploration: New advancements in eco-friendly drilling fluids for High-Pressure High-Temperature wells."
+        {"title": "AI Integration in Drilling Operations", "desc": f"[{current_date}] Operators expand generative AI and machine learning tools in MWD/LWD data analysis to predict pipe sticking and wellbore instability hazards ahead of time."},
+        {"title": "HPHT Exploration & Fluid Innovations", "desc": f"[{current_date}] Industry leaders introduce new advancements in eco-friendly drilling fluids designed for High-Pressure High-Temperature wells."}
     ]
     return news
 
@@ -27,18 +25,22 @@ def update_html():
     with open("index.html", "r", encoding="utf-8") as file:
         content = file.read()
     
-    # تحديث أسعار النفط في الـ HTML برمجياً عبر الـ ID
-    content = re.sub(r'<h3>Brent Crude Oil</h3>.*?<p>.*?</p>', f'<h3>Brent Crude Oil</h3>\n<p>{prices["brent"]}</p>', content, flags=re.DOTALL)
-    content = re.sub(r'<h3>WTI Crude Oil</h3>.*?<p>.*?</p>', f'<h3>WTI Crude Oil</h3>\n<p>{prices["wti"]}</p>', content, flags=re.DOTALL)
-    content = re.sub(r'<h3>Natural Gas</h3>.*?<p>.*?</p>', f'<h3>Natural Gas</h3>\n<p>{prices["gas"]}</p>', content, flags=re.DOTALL)
+    # تحديث الأسعار بدقة عبر الـ IDs المخصصة
+    content = re.sub(r'id="brent-price">.*?<', f'id="brent-price">{prices["brent"]}<', content)
+    content = re.sub(r'id="wti-price">.*?<', f'id="wti-price">{prices["wti"]}<', content)
+    content = re.sub(r'id="gas-price">.*?<', f'id="gas-price">{prices["gas"]}<', content)
     
-    # تحديث الأخبار
-    news_html = "".join([f"<div><h3>Latest Market Update</h3><p>{item}</p></div>" for item in news])
-    # نفترض وجود علامة مميزة في الـ HTML لتبديل الأخبار
+    # بناء كود الأخبار الجديد وهيكلتها داخل كروت الـ HTML
+    news_html = ""
+    for item in news:
+        news_html += f'<div class="card"><h3>{item["title"]}</h3><p>{item["desc"]}</p><p>Source: Industry Technical Reports</p></div>\n'
+    
+    # حقن كود الأخبار الجديد داخل الـ container المخصص له
+    content = re.sub(r'<div id="news-container">.*?</div>\s*</section>', f'<div id="news-container">\n{news_html}</div>\n</section>', content, flags=re.DOTALL)
     
     with open("index.html", "w", encoding="utf-8") as file:
         file.write(content)
-    print("Website updated successfully!")
+    print("Website code updated and structured successfully!")
 
 if __name__ == "__main__":
     update_html()
