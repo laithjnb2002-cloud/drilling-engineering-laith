@@ -2,141 +2,156 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Drilling Engineering by Eng. Laith</title>
+<title>
+Drilling Engineering by Eng. Laith Ali
+</title>
+
 
 <style>
 
+/* General */
+
 body{
     margin:0;
-    font-family:Arial, sans-serif;
-    background:#f2f5f8;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f7fa;
     color:#333;
 }
 
 
+/* Header */
+
 header{
-    background:linear-gradient(135deg,#0a2342,#13315c);
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.65)
+    ),
+    url("https://images.unsplash.com/photo-1516939884455-1445c8652f83");
+
+    background-size:cover;
+    background-position:center;
+
     color:white;
     text-align:center;
-    padding:60px 20px;
+
+    padding:100px 20px;
+
 }
 
 
 header h1{
-    font-size:40px;
-    margin-bottom:10px;
+
+    font-size:45px;
+    margin-bottom:15px;
+
 }
 
 
 header p{
-    font-size:20px;
+
+    font-size:22px;
+
 }
 
 
+/* Navigation */
+
 nav{
+
     background:#071a33;
-    padding:15px;
+    padding:18px;
     text-align:center;
+
 }
 
 
 nav a{
+
     color:white;
     text-decoration:none;
+
     margin:15px;
+
     font-weight:bold;
+
 }
 
 
 nav a:hover{
-    color:#f0c75e;
+
+    color:#d4af37;
+
+}
+
+
+/* Language button */
+
+.language{
+
+    position:absolute;
+    right:20px;
+    top:20px;
+
+}
+
+
+.language button{
+
+    background:#d4af37;
+    border:none;
+
+    padding:8px 15px;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
 }
 
 
 
+/* Sections */
+
 section{
 
+    max-width:1100px;
+
+    margin:35px auto;
+
     background:white;
-    max-width:1000px;
-    margin:30px auto;
+
     padding:35px;
+
     border-radius:15px;
-    box-shadow:0 5px 15px #ccc;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,0.1);
 
 }
 
 
 h2{
 
-    color:#0a2342;
-    border-bottom:3px solid #0a2342;
-    padding-bottom:10px;
+    color:#071a33;
+
+    border-left:
+    5px solid #d4af37;
+
+    padding-left:15px;
 
 }
 
-
-
-.card{
-
-    background:#f5f8fb;
-    padding:20px;
-    margin:15px 0;
-    border-radius:10px;
-
-}
-
-
-
-button{
-
-    background:#0a2342;
-    color:white;
-    padding:12px 25px;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
-
-}
-
-
-button:hover{
-
-    background:#13315c;
-
-}
-
-
-
-footer{
-
-    background:#071a33;
-    color:white;
-    text-align:center;
-    padding:25px;
-
-}
-
-
-
-@media(max-width:600px){
-
-header h1{
-font-size:28px;
-}
-
-nav a{
-display:block;
-margin:10px;
-}
-
-}
 
 </style>
 
 </head>
+
 
 
 <body>
@@ -144,11 +159,31 @@ margin:10px;
 
 <header>
 
-<h1>Drilling Engineering by Eng. Laith</h1>
+
+<div class="language">
+
+<button>
+العربية
+</button>
+
+</div>
+
+
+
+<h1>
+Drilling Engineering by Eng. Laith Ali
+</h1>
+
 
 <p>
-Petroleum & Drilling Engineer | Oil & Gas Knowledge Platform
+Oil & Gas Knowledge Platform
 </p>
+
+
+<p>
+Petroleum & Drilling Engineering | Technical Articles | Energy News
+</p>
+
 
 </header>
 
@@ -156,100 +191,232 @@ Petroleum & Drilling Engineer | Oil & Gas Knowledge Platform
 
 <nav>
 
-<a href="#about">About</a>
 
-<a href="#projects">Projects</a>
+<a href="#news">
+Oil & Gas News
+</a>
 
-<a href="#articles">Articles</a>
 
-<a href="#cv">CV</a>
+<a href="#prices">
+Oil Prices
+</a>
 
-<a href="#contact">Contact</a>
+
+<a href="#drilling">
+Drilling Engineering
+</a>
+
+
+<a href="#projects">
+Projects
+</a>
+
+
+<a href="#contact">
+Contact
+</a>
+
 
 </nav>
+<!-- Oil & Gas News -->
+
+<section id="news">
+
+<h2>
+Latest Oil & Gas News
+</h2>
 
 
+<div class="card">
 
-
-<section id="about">
-
-<h2>About Me</h2>
+<h3>
+Global Energy Market Updates
+</h3>
 
 <p>
-
-Welcome to my official engineering website.
-
-I am Eng. Laith Ali, Petroleum and Drilling Engineer.
-
-This platform is dedicated to sharing drilling engineering knowledge,
-technical studies, and petroleum industry projects.
-
+Stay updated with the latest developments in the oil and gas industry,
+including exploration, drilling projects, and energy technologies.
 </p>
+
+<p>
+Source: International Energy Reports
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+Oil & Gas Industry Technology
+</h3>
+
+<p>
+News and insights about drilling technologies,
+digital oil fields, and innovation in petroleum engineering.
+</p>
+
+<p>
+Source: Industry Publications
+</p>
+
+</div>
+
 
 </section>
 
 
 
+<!-- Oil Prices -->
+
+<section id="prices">
+
+<h2>
+Oil Market Dashboard
+</h2>
+
+
+<div class="card">
+
+<h3>
+Brent Crude Oil
+</h3>
+
+<p>
+Live price will be connected with market data API.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+WTI Crude Oil
+</h3>
+
+<p>
+Live price will be connected with market data API.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+Natural Gas
+</h3>
+
+<p>
+Energy market information and analysis.
+</p>
+
+</div>
+
+
+</section>
+
+
+
+
+<!-- Drilling Engineering -->
+
+<section id="drilling">
+
+
+<h2>
+Drilling Engineering Knowledge
+</h2>
+
+
+
+<div class="card">
+
+<h3>
+Lost Circulation
+</h3>
+
+<p>
+Study of causes, detection methods,
+and solutions for lost circulation problems during drilling operations.
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+Pipe Sticking Problems
+</h3>
+
+<p>
+Analysis of mechanisms, prevention,
+and treatment methods of pipe sticking.
+</p>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<h3>
+Wellbore Stability
+</h3>
+
+<p>
+Understanding formation instability
+and drilling challenges.
+</p>
+
+</div>
+
+
+</section>
+
+
+
+
+<!-- Projects -->
 
 <section id="projects">
 
-<h2>Engineering Projects</h2>
+
+<h2>
+Research & Projects
+</h2>
 
 
 <div class="card">
 
-<h3>Lost Circulation Study</h3>
+<h3>
+Master Research Topics
+</h3>
 
-<p>
-Review and analysis of lost circulation problems during drilling operations.
-</p>
+<ul>
 
-</div>
+<li>
+Lost Circulation Review
+</li>
 
+<li>
+Pipe Sticking Analysis
+</li>
 
+<li>
+Drilling Problems Investigation
+</li>
 
-<div class="card">
-
-<h3>Pipe Sticking Analysis</h3>
-
-<p>
-Study of causes, prevention, and solutions of pipe sticking problems.
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>Drilling Problems Review</h3>
-
-<p>
-Comprehensive review of common drilling challenges.
-</p>
-
-</div>
-
-
-</section>
-
-
-
-
-
-<section id="articles">
-
-<h2>Latest Articles</h2>
-
-
-<div class="card">
-
-<h3>Drilling Engineering Basics</h3>
-
-<p>
-Articles about drilling operations, well control, drilling fluids,
-and oil field technology will be published soon.
-</p>
+</ul>
 
 
 </div>
@@ -261,20 +428,35 @@ and oil field technology will be published soon.
 
 
 
-<section id="cv">
+<!-- About -->
 
-<h2>My CV</h2>
+<section id="about">
+
+
+<h2>
+About Eng. Laith Ali
+</h2>
+
 
 <p>
 
-You can download my professional CV.
+Eng. Laith Ali is a Petroleum and Drilling Engineer
+interested in oil and gas technologies,
+drilling optimization, and petroleum engineering research.
 
 </p>
 
 
-<button>
-Download CV
-</button>
+<p>
+
+Founder of:
+<br>
+
+<b>
+Drilling Engineering by Eng. Laith Ali
+</b>
+
+</p>
 
 
 </section>
@@ -282,11 +464,44 @@ Download CV
 
 
 
+
+<!-- Engineering Library -->
+
+<section id="library">
+
+
+<h2>
+Engineering Library
+</h2>
+
+
+<div class="card">
+
+<p>
+Technical papers, drilling references,
+engineering notes, and educational resources
+will be added soon.
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- Contact -->
 
 <section id="contact">
 
 
-<h2>Contact</h2>
+<h2>
+Contact
+</h2>
 
 
 <p>
@@ -305,11 +520,28 @@ Petroleum Engineering | Drilling Engineering
 
 
 
-<footer>
 
-© 2026 Drilling Engineering by Eng. Laith
+<footer style="
+background:#071a33;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:30px;
+">
+
+
+<p>
+© 2026 Drilling Engineering by Eng. Laith Ali
+</p>
+
+
+<p>
+Oil & Gas Knowledge Platform
+</p>
+
 
 </footer>
+
 
 
 </body>
